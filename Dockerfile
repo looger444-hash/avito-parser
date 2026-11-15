@@ -1,6 +1,5 @@
 FROM mcr.microsoft.com/playwright:v1.40.0-jammy
 WORKDIR /app
-COPY requirements.txt .
-RUN pip install -r requirements.txt
+RUN pip install playwright beautifulsoup4 requests
 COPY . .
 CMD ["python", "parser.py"]
